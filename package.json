@@ -1,12 +1,24 @@
 {
   "name": "poll-watch",
   "version": "0.0.0",
-  "description": "",
+  "description": "simple file change watcher using polling",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "poll-watch"
+  ],
+  "author": "talmobi <talmo.christian@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talmobi/poll-watch"
+  },
+  "bugs": {
+    "url": "https://github.com/talmobi/poll-watch/issues",
+    "email": "talmo.christian@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }

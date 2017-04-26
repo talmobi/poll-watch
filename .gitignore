@@ -5,3 +5,6 @@ node_modules
 
 # vim files
 *.sw?
+
+# test file
+test

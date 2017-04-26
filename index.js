@@ -90,11 +90,14 @@ function startPolling (filepath) {
   }, _intervals[filepath])
 }
 
-function createWatcher () {
+function createWatcher (filepath) {
   var _listeners = []
+  var _mtime
+  var _last_mtime
+
   function on (callback) {
     _listeners.push(callback)
-    return function off () {
+    return function off () { // return off/unsubscribe function
       var i = _listeners.indexOf(callback)
       return _listeners.splice(i, 1)
     }
@@ -102,8 +105,14 @@ function createWatcher () {
 
   function emit () {
     _listeners.forEach(function (callback) {
-      callback()
+      callback({
+        path: filepath,
+        mtime: _mtimes[filepath],
+        last_mtime: _last_mtime
+      })
     })
+
+    _last_mtime = _mtimes[filepath]
   }
 
   return {

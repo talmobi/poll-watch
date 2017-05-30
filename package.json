@@ -1,6 +1,6 @@
 {
   "name": "poll-watch",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "simple file change watcher using polling",
   "main": "index.js",
   "scripts": {
